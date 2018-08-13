@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	[% INCLUDE aa_head.html -%]
+
+	<body>
+        <div><span style="display: none; display: none !important; color: #FFFFFF ; font-size: 1px;">[% shared.PREHEADER -%]​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​</span></div>
+        <div style="background-color:#FFFFFf;">
+          <!--[if gte mso 9]>
+          <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+            <v:fill type="tile" src="https://u.mailkit.eu/user.fcgi/action,img_local/dc,8497/df,168746" color="#FFFFFf"/>
+          </v:background>
+          <![endif]-->
+          <table height="100%" width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td valign="top" align="left" background="https://u.mailkit.eu/user.fcgi/action,img_local/dc,8497/df,168746">
+                  
+		<center style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+			<div style="max-width: 600px; margin: 0 auto;">
+				<!--[if (gte mso 9)|(IE)]>
+				<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+				<td>
+				<![endif]-->
+				<table style="margin: 20px auto; width: 100%; max-width: 600px; background-color: #FFFFFF;" align="center" cellpadding="0" cellspacing="0" border="0">
+[% INCLUDE aa_header.html -%]
+<!-- MAIN STAGE START -->
+					<tr>
+						<td style="text-align: center; font-size: 0;">
+							<!--[if (gte mso 9)|(IE)]>
+							<table width="100%" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+							<td width="600" valign="top">
+							<![endif]-->
+							<div style="width: 100%; max-width: 600px; display: inline-block; vertical-align: top;">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td style="padding: 10px;">
+											<!-- CONTENT -->
+											<table style="text-align: center;" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+													<td style="padding: 10px 0 0 0; font-family: Verdana; font-size: 25px; line-height: 30px; font-weight: bold; text-transform: uppercase;">
+                                                        [% IF shared.ORDER_NAME == 'storno'-%]
+                                                            Zrušení objednávky č. [% shared.ORDER_NUMBER -%]
+                                                        [% ELSIF shared.ORDER_NAME == 'storno_zakoupil_jine_zbozi'-%]
+                                                            Zrušení objednávky - Koupil jsem něco jiného
+                                                        [% ELSIF shared.ORDER_NAME == 'storno_nic_nekoupil'-%]
+                                                            Zrušení objednávky - Nic se mi nelíbilo
+                                                        [% ELSIF shared.ORDER_NAME == 'storno_neprisel'-%]
+                                                            Zrušení objednávky - Nestihl jsem to
+                                                        [% ELSIF shared.ORDER_NAME == 'storno_nemame_skladem'-%]
+                                                            Zrušení objednávky - Není na skladě
+                                                        [% ELSIF shared.ORDER_NAME == 'storno_zakaznikem'-%]
+                                                            Zrušení objednávky - Nemám zájem
+                                                        [% ELSIF shared.ORDER_NAME == 'storno_nezaplaceno'-%]
+                                                            Zrušení objednávky - Neuhrazeno
+														[% END -%]
+													</td>
+												</tr>
+                                                <tr>
+													<td style="padding: 14px 0 0 0; text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px; font-weight: bold;">
+														Dobrý den, [% IF recipient.GENDER == 'M' -%]pane [SKLONUJ 5,j,1][LAST_NAME][/SKLONUJ],[% ELSIF recipient.GENDER == 'F' -%]paní [SKLONUJ 5,j,1][LAST_NAME][/SKLONUJ],[% ELSE -%][% END -%]
+													</td>
+												</tr>
+                                                [% IF shared.ORDER_NAME == 'storno'-%]
+												<tr>
+													<td style="text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px;">
+												       <p>
+                                                           objednávku číslo [% shared.ORDER_NUMBER -%] ze dne [% USE date(format = '%Y-%m-%d %H:%M%S', locale = 'cs_CZ') %][% date.format(shared.ORDER_CREATED, '%d. %m. %Y') -%] jsme museli stornovat z důvodu již vyprodaného zboží. Moc nás to mrzí a věříme, že příští objednávka dopadne podle Vašich představ. Děkujeme za pochopení.
+                                                        </p>
+													</td>
+												</tr>
+                                                [% ELSIF shared.ORDER_NAME == 'storno_zakoupil_jine_zbozi'-%]
+                                                <tr>
+													<td style="text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px;">
+												       <p>
+                                                          sice rezervace nebyla trefa do černého, ale jsme rádi, že jste nakonec [% IF recipient.GENDER == 'M' -%]našel[% ELSIF recipient.GENDER == 'F' -%]našla[% ELSE -%]našel/a[% END -%] ten správný produkt, který Vám udělal radost. Děkujeme a těšíme se na další setkání.
+                                                        </p>
+													</td>
+												</tr>
+                                                [% ELSIF shared.ORDER_NAME == 'storno_nic_nekoupil'-%]
+                                                <tr>
+													<td style="text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px;">
+												       <p>
+                                                           moc nás mrzí, že zboží z Vaší rezervace [% shared.ORDER_NUMBER -%] nebylo přesně to, co jste [% IF recipient.GENDER == 'M' -%]očekával[% ELSIF recipient.GENDER == 'F' -%]očekávala[% ELSE -%]očekával/a[% END -%]. Věříme, že se potkáme u nás na prodejně při příštím nákupu.
+                                                        </p>
+													</td>
+												</tr>
+                                                [% ELSIF shared.ORDER_NAME == 'storno_neprisel'-%]
+                                                <tr>
+													<td style="text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px;">
+												       <p>
+                                                           moc nás mrzí, že jste se u nás [% IF recipient.GENDER == 'M' -%]nezastavil[% ELSIF recipient.GENDER == 'F' -%]nezastavila[% ELSE -%]nezastavil/a[% END -%], tak jsme museli Vaší rezervaci [% shared.ORDER_NUMBER -%] ukončit. Ale nic se neděje, určitě to vyjde příště.
+                                                        </p>
+													</td>
+												</tr>
+                                                [% ELSIF shared.ORDER_NAME == 'storno_nemame_skladem'-%]
+                                                <tr>
+													<td style="text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px;">
+												       <p>
+                                                          omlouváme se, ale Vámi rezervované zboží z objednávky č. [% shared.ORDER_NUMBER -%] jsme na prodejně již nenalezli a z toho důvodu nemůžeme rezervaci potvrdit.
+                                                        </p>
+													</td>
+												</tr>
+                                                [% ELSIF shared.ORDER_NAME == 'storno_zakaznikem'-%]
+                                                <tr>
+													<td style="text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px;">
+												       <p>
+                                                           objednávku číslo [% shared.ORDER_NUMBER -%] jsme na Vaší žádost stornovali. Přesto děkujeme a věříme, že příští objednávku společně dokončíme. V případě jakéhokoliv problému nás neváhejte kontaktovat. 
+                                                           <br><br>
+                                                           Děkujeme za pochopení
+                                                        </p>
+													</td>
+												</tr>
+                                                [% ELSIF shared.ORDER_NAME == 'storno_nezaplaceno'-%]
+                                                <tr>
+													<td style="text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px;">
+												       <p>
+                                                           objednávku číslo [% shared.ORDER_NUMBER -%] jsme museli stornovat z důvodu neuhrazené platby. Pokud budete mít stále zájem, mužete samozřejmě vytvořit novou objednávku. V případě jakéhokoliv problému nás neváhejte kontaktovat.
+                                                           <br><br>
+                                                           Děkujeme za pochopení
+                                                        </p>
+													</td>
+												</tr>
+                                                [% END -%]
+                                                <tr>
+                                                    <td style="text-align: left; font-family: Verdana; font-size: 14px; line-height: 21px; padding: 10px 0 0 0;">
+                                                       <p>Outdoor experti z Rock Pointu</p>
+                                                    </td>
+                                                </tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--[if (gte mso 9)|(IE)]>
+							</td>
+							</tr>
+							</table>
+							<![endif]-->
+						</td>
+					</tr>
+<!-- MAIN STAGE END -->
+[% INCLUDE aa_footer.html -%]
+				</table>
+				<!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<![endif]-->
+			</div>
+		</center>
+                  
+                </td>
+            </tr>
+          </table>
+        </div>
+	</body>
+</html>
